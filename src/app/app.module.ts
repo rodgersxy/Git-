@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { GitDetailComponent } from './git-detail/git-detail.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 
@@ -14,6 +15,7 @@ import { GitDetailComponent } from './git-detail/git-detail.component';
     AppComponent,
     HeaderComponent,
     GitDetailComponent,
+    DateCountPipe,
 
   
   
