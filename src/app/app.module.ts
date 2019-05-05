@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { GitDetailComponent } from './git-detail/git-detail.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    GitDetailComponent
+    GitDetailComponent,
+
+  
+  
   ],
   imports: [
     BrowserModule,

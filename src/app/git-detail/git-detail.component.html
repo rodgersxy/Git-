@@ -1,3 +1,44 @@
-<p>
-  git-detail works!
-</p>
+<div class="container">
+  <div class="row align">
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="name">UserName</label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" (keyup.enter)="searchUser()" placeholder="Username">
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div *ngIf="show">
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="container">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{user.login}}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-8 fontz">
+              <span class="label label-default">{{user.public_repos}} Public Repos</span>
+              <span class="label label-primary">{{user.public_gitss}} Public Gists</span>
+              <span class="label label-success"> {{user.followers}} Followers</span>
+              <span class="label label-danger"> {{user.following}} Following </span>
+              <span class="label label-info"> <a class="vw" href="{{user.zlink}}">View Repos</a></span>
+              <br>
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Name:</strong>{{user.name}}</li>
+                <li class="list-group-item"><strong>Email:</strong>{{user.email}}</li>
+                <li class="list-group-item"><strong>Created on:</strong>{{user.created_at|date:'yyy-mm-dd'}} ~ {{user.created_at|dateCount}} days have passed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
